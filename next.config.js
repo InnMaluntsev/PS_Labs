@@ -2,8 +2,8 @@
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
-  basePath: '/PS_Labs', 
-  assetPrefix: '/PS_Labs',
+  basePath: '/PS_Labs',
+  assetPrefix: '/PS_Labs/',
   images: {
     unoptimized: true
   }
