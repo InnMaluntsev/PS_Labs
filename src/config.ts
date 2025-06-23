@@ -10,7 +10,7 @@ const isDev = process.env.NODE_ENV === 'development';
 
 export const generalConfig: GeneralConfig = {
   companyName: "Fireblocks",
-  basePath: isDev ? "" : "/ps-labs",
+  basePath: "/PS_Labs", 
 };
 
 export const navBarConfig: NavBarConfig = {
