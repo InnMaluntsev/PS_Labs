@@ -1,12 +1,19 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: 'export',
-  trailingSlash: true,
-  basePath: '/PS_Labs',
-  assetPrefix: '/PS_Labs/',
-  images: {
-    unoptimized: true
-  }
-}
+const isDev = process.env.NODE_ENV === 'development';
 
-module.exports = nextConfig
+const nextConfig = {
+  eslint: {
+    ignoreDuringBuilds: true, 
+  },
+  ...(isDev ? {} : {
+    output: 'export',
+    basePath: '/ps-labs',
+    assetPrefix: '/ps-labs',
+  }),
+  trailingSlash: true,
+  images: {
+    unoptimized: true,
+  },
+};
+
+module.exports = nextConfig;

@@ -166,7 +166,7 @@ const ApiBuilderComponent: React.FC<ApiBuilderComponentProps> = ({ onValidationC
     if (!response.version) {
       errors.push('Missing required field: version');
     } else if (!/^\d+\.\d+\.\d+$/.test(response.version)) {
-      warnings.push('Version should follow semantic versioning (e.g., "1.0.37")');
+      warnings.push('Version should follow semantic versioning (e.g., &quot;1.0.37&quot;)');
     }
 
     if (!response.components) {
@@ -175,15 +175,15 @@ const ApiBuilderComponent: React.FC<ApiBuilderComponentProps> = ({ onValidationC
     }
 
     if (!response.components.accounts) {
-      errors.push('Capabilities must always include "accounts" component');
+      errors.push('Capabilities must always include &quot;accounts&quot; component');
     }
     if (!response.components.balances) {
-      errors.push('Capabilities must always include "balances" component');
+      errors.push('Capabilities must always include &quot;balances&quot; component');
     }
 
     Object.entries(response.components).forEach(([key, value]) => {
       if (value !== '*' && !Array.isArray(value)) {
-        errors.push(`Component "${key}" must be either "*" or an array of account IDs`);
+        errors.push(`Component &quot;${key}&quot; must be either &quot;*&quot; or an array of account IDs`);
       }
     });
   };
@@ -195,21 +195,21 @@ const ApiBuilderComponent: React.FC<ApiBuilderComponentProps> = ({ onValidationC
     }
 
     if (!Array.isArray(response.assets)) {
-      errors.push('Field "assets" must be an array');
+      errors.push('Field &quot;assets&quot; must be an array');
       return;
     }
 
     response.assets.forEach((asset: any, index: number) => {
-      if (!asset.id) errors.push(`Asset ${index}: Missing required "id" field`);
-      if (!asset.type) errors.push(`Asset ${index}: Missing required "type" field`);
-      if (!asset.name) errors.push(`Asset ${index}: Missing required "name" field`);
-      if (!asset.symbol) errors.push(`Asset ${index}: Missing required "symbol" field`);
+      if (!asset.id) errors.push(`Asset ${index}: Missing required &quot;id&quot; field`);
+      if (!asset.type) errors.push(`Asset ${index}: Missing required &quot;type&quot; field`);
+      if (!asset.name) errors.push(`Asset ${index}: Missing required &quot;name&quot; field`);
+      if (!asset.symbol) errors.push(`Asset ${index}: Missing required &quot;symbol&quot; field`);
       if (typeof asset.decimalPlaces !== 'number') {
-        errors.push(`Asset ${index}: "decimalPlaces" must be a number`);
+        errors.push(`Asset ${index}: &quot;decimalPlaces&quot; must be a number`);
       }
       
       if (asset.type === 'Erc20Token' && !asset.contractAddress) {
-        errors.push(`Asset ${index}: ERC-20 tokens require "contractAddress" field`);
+        errors.push(`Asset ${index}: ERC-20 tokens require &quot;contractAddress&quot; field`);
       }
     });
   };
@@ -221,17 +221,17 @@ const ApiBuilderComponent: React.FC<ApiBuilderComponentProps> = ({ onValidationC
     }
 
     if (!Array.isArray(response.accounts)) {
-      errors.push('Field "accounts" must be an array');
+      errors.push('Field &quot;accounts&quot; must be an array');
       return;
     }
 
     response.accounts.forEach((account: any, index: number) => {
-      if (!account.id) errors.push(`Account ${index}: Missing required "id" field`);
-      if (!account.title) errors.push(`Account ${index}: Missing required "title" field`);
-      if (!account.status) errors.push(`Account ${index}: Missing required "status" field`);
+      if (!account.id) errors.push(`Account ${index}: Missing required &quot;id&quot; field`);
+      if (!account.title) errors.push(`Account ${index}: Missing required &quot;title&quot; field`);
+      if (!account.status) errors.push(`Account ${index}: Missing required &quot;status&quot; field`);
       
       if (account.status && !['active', 'suspended', 'closed'].includes(account.status)) {
-        errors.push(`Account ${index}: Status must be "active", "suspended", or "closed"`);
+        errors.push(`Account ${index}: Status must be &quot;active&quot;, &quot;suspended&quot;, or &quot;closed&quot;`);
       }
     });
   };
@@ -243,17 +243,17 @@ const ApiBuilderComponent: React.FC<ApiBuilderComponentProps> = ({ onValidationC
     }
 
     if (!Array.isArray(response.balances)) {
-      errors.push('Field "balances" must be an array');
+      errors.push('Field &quot;balances&quot; must be an array');
       return;
     }
 
     response.balances.forEach((balance: any, index: number) => {
-      if (!balance.id) errors.push(`Balance ${index}: Missing required "id" field`);
-      if (!balance.asset) errors.push(`Balance ${index}: Missing required "asset" field`);
-      if (!balance.availableAmount) errors.push(`Balance ${index}: Missing required "availableAmount" field`);
+      if (!balance.id) errors.push(`Balance ${index}: Missing required &quot;id&quot; field`);
+      if (!balance.asset) errors.push(`Balance ${index}: Missing required &quot;asset&quot; field`);
+      if (!balance.availableAmount) errors.push(`Balance ${index}: Missing required &quot;availableAmount&quot; field`);
       
       if (balance.availableAmount && !/^\d+(\.\d+)?$/.test(balance.availableAmount)) {
-        errors.push(`Balance ${index}: "availableAmount" must be a positive number string`);
+        errors.push(`Balance ${index}: &quot;availableAmount&quot; must be a positive number string`);
       }
       
       if (balance.asset) {
@@ -287,7 +287,7 @@ const ApiBuilderComponent: React.FC<ApiBuilderComponentProps> = ({ onValidationC
       validatedEndpoints.push(selectedEndpoint);
     }
     
-    const uniqueValidated = [...new Set(validatedEndpoints)];
+    const uniqueValidated = Array.from(new Set(validatedEndpoints));
     const allValidated = allEndpoints.every(endpoint => uniqueValidated.includes(endpoint));
     
     // Notify parent component about completion status
@@ -476,8 +476,8 @@ const ApiBuilderComponent: React.FC<ApiBuilderComponentProps> = ({ onValidationC
         <ul className="text-yellow-700 space-y-1 text-sm">
           <li>• All amount fields should be strings representing positive numbers</li>
           <li>• Asset references must have exactly one of: nationalCurrencyCode, cryptocurrencySymbol, or assetId</li>
-          <li>• The capabilities endpoint must always include "accounts" and "balances" components</li>
-          <li>• Account status must be "active", "suspended", or "closed"</li>
+          <li>• The capabilities endpoint must always include &quot;accounts&quot; and &quot;balances&quot; components</li>
+          <li>• Account status must be &quot;active&quot;, &quot;suspended&quot;, or &quot;closed&quot;</li>
           <li>• Use proper decimal places: USD (2), BTC (8), USDC (6)</li>
         </ul>
       </div>

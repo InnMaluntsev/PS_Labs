@@ -1,7 +1,8 @@
 {
   "name": "ps-labs",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "homepage": "https://innmaluntsev.github.io/PS_Labs",
   "scripts": {
     "dev": "next dev & sleep 2 && open http://localhost:3000/",
     "dev:simple": "next dev",
@@ -12,12 +13,10 @@
   "dependencies": {
     "@tailwindcss/typography": "^0.5.14",
     "@types/unist": "^3.0.3",
-    "fs": "^0.0.1-security",
     "highlight.js": "^11.10.0",
     "html2canvas": "^1.4.1",
     "jspdf": "^3.0.1",
     "next": "14.2.5",
-    "path": "^0.12.7",
     "react": "^18",
     "react-confetti": "^6.1.0",
     "react-dom": "^18",
