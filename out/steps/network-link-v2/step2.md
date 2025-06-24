@@ -1,30 +1,25 @@
-# Step 2: Authentication & Signature Quiz
+# Step 2: Network Link v2 General Knowledge Quiz
 
-## Understanding Authentication
+## Overview
 
-Network Link v2 uses cryptographic signatures to ensure secure communication between Fireblocks and your service. Every API request must include specific headers and a valid signature.
+Before diving into the technical implementation details, it's essential to understand the core concepts, capabilities, and business use cases of Network Link v2. This quiz will test your knowledge of the feature's fundamentals and help you better support customers during implementation.
 
-## Required Headers
+## Network Link v2 Fundamentals
 
-All REST requests must contain these headers:
+Network Link v2 is Fireblocks' enhanced connectivity solution that enables exchanges and financial institutions to integrate with the Fireblocks ecosystem through standardized APIs. Understanding these concepts is crucial for successful customer implementations.
 
-- **X-FBAPI-KEY**: The API key as a string
-- **X-FBAPI-SIGNATURE**: The payload signature output  
-- **X-FBAPI-TIMESTAMP**: Request timestamp in milliseconds since Unix Epoch
-- **X-FBAPI-NONCE**: A unique reference to the request (Random UUID)
+### Key Concepts to Review:
 
-## Signature Process Overview
+- **Fireblocks Network vs Network Link v2**
+- **API capabilities and endpoint requirements**
+- **Transfer methods and settlement types**
+- **Account structures and management**
+- **Supported asset types and blockchain coverage**
 
-The signature is created by:
-1. **Building the message**: `timestamp + nonce + method + endpoint + body`
-2. **Pre-encoding** (configurable): PLAIN, BASE64, HEXSTR, BASE58, BASE32
-3. **Signing** with chosen algorithm: HMAC, RSA, or ECDSA
-4. **Post-encoding** (configurable): PLAIN, BASE64, HEXSTR, BASE58, BASE32
+## Knowledge Check
 
 <!--QUIZ_PLACEHOLDER-->
 
-## Next Steps
+## What's Next?
 
-Now that you understand the authentication fundamentals, let's implement the core API endpoints that Fireblocks will call to interact with your service.
-
-Great job! You&apos;re ready to build the actual integration. 🚀
+Once you've completed this general knowledge quiz, you'll move on to the technical authentication details and then build actual API responses. This foundation will help you better understand customer needs and provide accurate guidance during implementations.
