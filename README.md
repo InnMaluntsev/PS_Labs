@@ -75,6 +75,6 @@ This platform provides Professional Services engineers with the knowledge and to
 
    The platform generates static files in the `out/` directory, ready for deployment to any static hosting service (Vercel, Netlify, AWS S3, etc.).
 
-**Built with ❤️ by the Fireblocks Produvt Delivery Team**
+**Built with ❤️ by the Fireblocks Product Delivery Team**
 
 *Empowering engineers to deliver exceptional client implementations*
