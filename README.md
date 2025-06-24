@@ -35,7 +35,7 @@ This platform provides Professional Services engineers with the knowledge and to
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd fireblocks-training-platform
+   cd PS_Labs
    ```
 
 2. **Install dependencies**
