@@ -1,4 +1,7 @@
-# Step 3: API Implementation & Validator Testing
+## Comming soon!
+
+
+<!-- # Step 3: API Implementation & Validator Testing
 
 ## Implementation Overview
 
@@ -274,4 +277,4 @@ Once your API Validator shows **all green results**, you're ready for:
 3. **Production Onboarding**: Submit all required documentation
 4. **Beta Testing**: Work with Fireblocks PM for beta enrollment
 
-**Your Off-Exchange Provider implementation is production-ready!** 🎉
+**Your Off-Exchange Provider implementation is production-ready!** 🎉 -->

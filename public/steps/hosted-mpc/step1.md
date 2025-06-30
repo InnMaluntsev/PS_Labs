@@ -1,4 +1,7 @@
-# Step 1: Understanding Hosted MPC Architecture
+## Comming soon!
+
+
+<!-- # Step 1: Understanding Hosted MPC Architecture
 
 ## Overview
 
@@ -251,4 +254,4 @@ Ready to start building? In the next step, we'll set up your SGX-enabled infrast
 - SGX environment setup and validation
 - Docker and container configuration
 - Network and security preparation
-- Certificate generation workflow
+- Certificate generation workflow -->

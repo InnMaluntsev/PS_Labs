@@ -1,4 +1,7 @@
-# Step 3: Deploy Guard Co-Signers
+## Comming soon!
+
+
+<!-- # Step 3: Deploy Guard Co-Signers
 
 ## Overview
 
@@ -842,4 +845,4 @@ Excellent! Your Guard Co-Signers are now deployed and operational. In Step 4, we
 - Primary Co-Signer deployment options
 - Workspace schema configuration with Ops-Client
 - Clique formation and validation
-- First MPC transaction signing test
+- First MPC transaction signing test -->
