@@ -120,11 +120,12 @@ export default function StepsClient({ steps, labConfig, labSlug }: StepsClientPr
   return (
     <>
       {!completedSteps.includes(steps.length) && prerequisites.length > 0 && (
-        <div className="bg-primary-50 border shadow-md shadow-primary-100 border-primary-200 rounded-lg p-6 mb-8 mt-7 mx-4 sm:mx-6 lg:mx-8">
+        <div className="container mx-auto px-6 md:px-12 lg:px-24">
+        <div className="bg-primary-50 border shadow-md shadow-primary-100 border-primary-200 rounded-2xl p-6 mb-10">
           <h3 className="text-2xl font-bold text-primary mb-4">
             Prerequisites:
           </h3>
-          <ul className="list-disc list-inside text-gray-700 mt-3">
+          <ul className="list-disc list-inside text-gray-700 mt-3 space-y-1">
             {prerequisites.map((prerequisite, index) => (
               <li
                 key={index}
@@ -133,6 +134,8 @@ export default function StepsClient({ steps, labConfig, labSlug }: StepsClientPr
             ))}
           </ul>
         </div>
+      </div>
+      
       )}
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
