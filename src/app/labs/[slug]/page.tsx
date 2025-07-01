@@ -17,8 +17,8 @@ export async function generateStaticParams() {
     "network-link-v2",
     "off-exchange", 
     "embedded-wallets",
-    "hosted-mpc"
-  ];
+    "web3-workshop"
+    ];
   
   return labSlugs.map((slug) => ({
     slug: slug,
