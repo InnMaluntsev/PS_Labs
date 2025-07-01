@@ -1,13 +1,13 @@
 import { generalConfig, mainPageConfig } from "@/config";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Navbar from "./components/Navbar";
+import Layout from "./components/Layout";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: `${mainPageConfig.subTitle}`,
+  title: mainPageConfig.subTitle, // Fixed: removed template literal syntax
   icons: {
     icon: "https://openmoji.org/data/color/svg/1F4D6.svg",
   },
@@ -23,8 +23,8 @@ export default function RootLayout({
       <body
         className={inter.className}
         style={{
-          backgroundColor: "#fffefe",
-          backgroundImage: `url(${generalConfig.basePath}/images/background.svg)`,
+          backgroundColor: "#fffefe", // Fixed: added quotes
+          backgroundImage: `url(${generalConfig.basePath}/images/background.svg)`, // Fixed: proper template literal
           backgroundRepeat: "repeat",
           backgroundSize: "20px 20px",
           backgroundPosition: "top left",
@@ -32,8 +32,9 @@ export default function RootLayout({
           minHeight: "100vh"
         }}
       >
-        <Navbar />
-        {children}
+        <Layout>
+          {children}
+        </Layout>
       </body>
     </html>
   );

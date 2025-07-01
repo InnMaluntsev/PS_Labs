@@ -7,8 +7,8 @@ const nextConfig = {
   },
   ...(isDev ? {} : {
     output: 'export',
-    basePath: '/ps-labs',
-    assetPrefix: '/ps-labs',
+    basePath: '/PS_Labs',
+    assetPrefix: '/PS_Labs',
   }),
   trailingSlash: true,
   images: {

@@ -8,7 +8,8 @@
     "dev:simple": "next dev",
     "start": "next start",
     "lint": "next lint",
-    "build": "next build"
+    "build": "next build",
+    "export": "next export"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.14",
@@ -37,10 +38,11 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "autoprefixer": "^10.4.21",
     "eslint": "^8",
     "eslint-config-next": "14.2.5",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17",
     "ts-node": "^10.9.2"
   }
 }
