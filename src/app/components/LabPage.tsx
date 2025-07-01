@@ -5,8 +5,6 @@ import { useRouter } from "next/navigation";
 import { FiArrowLeft } from "react-icons/fi";
 import StepsClient from "./StepsClient";
 import { LabConfig, Step } from "@/types";
-import { generalConfig } from "@/config";
-
 
 type LabPageProps = {
   labSlug: string;
@@ -52,7 +50,7 @@ export default function LabPage({ labSlug }: LabPageProps) {
                 console.log(`Loading step ${step.id} from file: ${step.file}`);
                 
                 // Direct access to public/steps/ without basePath
-                const fileUrl = `${generalConfig.basePath}/steps/${step.file}`;
+                const fileUrl = `/steps/${step.file}`;
                 console.log(`Trying to fetch: ${fileUrl}`);
                 
                 const response = await fetch(fileUrl);
