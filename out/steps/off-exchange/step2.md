@@ -1,4 +1,7 @@
-# Step 2: API Authentication & Mandatory Capabilities
+## Comming soon!
+
+
+<!-- # Step 2: API Authentication & Mandatory Capabilities
 
 ## Off-Exchange Authentication Framework
 
@@ -83,4 +86,4 @@ All Off-Exchange Provider integrations must implement these four mandatory capab
 
 Now that you understand the authentication framework and mandatory capabilities, let&apos;s implement the actual API endpoints that enable secure collateral management and settlement operations.
 
-Ready to build production-grade Off-Exchange APIs! 🎯
+Ready to build production-grade Off-Exchange APIs! 🎯 -->
